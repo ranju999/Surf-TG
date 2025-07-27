@@ -6,8 +6,8 @@ import re
 
 class Database:
     def __init__(self):
-        MONGODB_URI = Telegram.DATABASE_URL
-        self.mongo_client = MongoClient(MONGODB_URI)
+       # MONGODB_URI = Telegram.DATABASE_URL
+        self.mongo_client = MongoClient(Telegram.DATABASE_URL)
         self.db = self.mongo_client["surftg"]
         self.collection = self.db["playlist"]
         self.config = self.db["config"]
