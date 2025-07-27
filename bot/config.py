@@ -2,9 +2,6 @@ from os import getenv
 from dotenv import load_dotenv
 from pathlib import Path
 
-if Path("config.env").exists():
-    load_dotenv("config.env")
-
 class Telegram:
     API_ID = int(getenv("API_ID", "12380656"))
     API_HASH = getenv("API_HASH", "d927c13beaaf5110f25c505b7c071273")
